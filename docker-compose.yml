@@ -1,5 +1,5 @@
 services:
-  greeting-service:
+  week11:
     image: ghcr.io/mia-acton/cicdlab7/app:latest
     env_file: ./.env
     ports:
@@ -11,7 +11,7 @@ services:
     image: ghcr.io/mia-acton/cicdlab7part2/app
     env_file: ./.env
     depends_on:
-      - greeting-service
+      - week11
     ports:
       - "8080:8080"
     networks:
